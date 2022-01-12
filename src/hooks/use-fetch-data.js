@@ -30,7 +30,7 @@ const useFetchData = () => {
         },
       });
       setData(response);
-      setUpdatedAt(response.indicator.values_updated_at);
+      setUpdatedAt(response.indicator.values[0].datetime);
     } catch (error) {
       console.log(error);
     }

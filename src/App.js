@@ -68,7 +68,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <div className="Wrapper">
-          <h1 className="white">Precio de la luz</h1>
+          <h1 className="white">Precio luz</h1>
           <Logout logout={showModalHandler} />
         </div>
       </header>
