@@ -1,0 +1,22 @@
+.wrapper{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+.left__title {
+    font-size: 26px;
+    font-weight: 300;
+
+}
+.body_left_hour{
+    font-size: 28px;
+    font-weight: 200 ;
+}
+.body_right_value {
+    font-size: 18px;
+}

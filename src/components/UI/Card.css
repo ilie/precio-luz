@@ -1,0 +1,21 @@
+.card {
+  width: 100%;
+
+}
+
+.bg-white {
+  border-radius: 7px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.123);
+}
+
+.text-white {
+    color: white;
+}
+
+@media (min-width: 600px) {
+  .card {
+    min-width: 480px;
+    height: 260px;
+  }
+}

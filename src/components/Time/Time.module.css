@@ -1,0 +1,13 @@
+.time{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 7px;
+}
+.time .text {
+    font-size: 30px;
+    font-weight: 300;
+}
+.time .icon img {
+    height: 22px;
+}
