@@ -55,11 +55,9 @@ const useFetchData = () => {
 
   // Fetch data if outdated
   useEffect(() => {
-    console.log("Fecth data invoked");
     const today = currentTime.getDay();
     const lastUpdate = new Date(updatedAt).getDay();
     if (today !== lastUpdate) {
-      console.log("Fecthing new data ...");
       fetchData();
     }
   }, [currentTime]);
