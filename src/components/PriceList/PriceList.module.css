@@ -1,0 +1,20 @@
+.element{
+display: flex;
+flex-direction: column;
+
+}
+
+.line{
+font-size: 22px;
+line-height: 32px;
+padding-left: 10px;
+display: flex;
+justify-content: space-between;
+color: white;
+font-weight: 300;
+}
+.separator {
+    margin: 1px;
+    border: 1 em;
+    border-color: rgba(255, 255, 255, 0.37) ;
+}

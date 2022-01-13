@@ -6,11 +6,15 @@ import "./Chart.css";
 
 const PriceChart = (props) => {
   const currentHour = useCurrentTime().getHours().toString();
+  const dataValues = props.arrayValues.map((dataValue) => {
+    return dataValue.toFixed(5);
+  });
   const apexChartData = {
     series: [
       {
         name: "€/Kwh",
-        data: props.arrayValues,
+        //data: props.arrayValues,
+        data: dataValues,
       },
     ],
     options: {
@@ -66,7 +70,7 @@ const PriceChart = (props) => {
   };
 
   return (
-    <Card classes="bg-white">
+    <Card classes="bg-white item2">
       <h2 className="white">Gráfico por horas</h2>
       <Chart
         options={apexChartData.options}

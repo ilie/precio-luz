@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-
+  height: 260px;
 }
 
 .bg-white {
@@ -13,9 +13,13 @@
     color: white;
 }
 
+.overflow {
+  height: auto;
+}
+
 @media (min-width: 600px) {
   .card {
     min-width: 480px;
-    height: 260px;
   }
+
 }

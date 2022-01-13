@@ -6,6 +6,7 @@ import Spinner from "./components/UI/Spinner/Spinner";
 import Today from "./components/Today";
 import Chart from "./components/Chart/Chart";
 import MinMax from "./components/MinMax/MinMax";
+import PriceList from "./components/PriceList/PriceList";
 import Modal from "./components/UI/Modal/Modal";
 import Login from "./components/Auth/Login";
 import Logout from "./components/Auth/Logout";
@@ -60,6 +61,7 @@ const App = () => {
         />
         <Chart arrayValues={values} />
         <MinMax arrayValues={values} />
+        <PriceList arrayValues={values} />
       </Fragment>
     );
   }

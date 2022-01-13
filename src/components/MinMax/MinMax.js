@@ -21,7 +21,7 @@ const MinMax = (props) => {
     value: maxValue.toFixed(5),
   };
   return (
-    <Card classes="bg-white">
+    <Card classes="bg-white item3">
       <h2 className="white">{icon} Precio mínimo y máximo</h2>
       <div className={classes.body}>
         <PriceElement title="Mínimo" value={min} />
