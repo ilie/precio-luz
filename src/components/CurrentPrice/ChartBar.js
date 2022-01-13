@@ -4,7 +4,9 @@ const ChartBar = (props) => {
   let fillColour = "green";
 
   if (props.maxValue > 0) {
-    barFill = Math.round((props.value / props.maxValue) * 100);
+    const minValue = props.value - props.minValue;
+    const maxValue = props.maxValue - props.minValue;
+    barFill = Math.round((minValue / maxValue) * 100);
   }
   if (barFill > 25 && barFill < 75) {
     fillColour = "#fea001";

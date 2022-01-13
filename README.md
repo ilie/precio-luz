@@ -44,4 +44,4 @@ copiar el contenido de la carpeta build en cualquier tipo de servidor web, no ha
 ## Uso
 Para poder utilizarla es necesario tener un token Sios de la red eléctrica de España, que se puede solicitar por correo electrónico de forma gratuita a esta dirección: consultasios@ree.es
 
-Es recomendable rfrescar solo una vez al día para no hacer muchas peticiones a la api para obener los datos actualizados y la app se encarga de mostrar el precio de la hora en la que estámos.
+No es necesario refrescar ya que la app se encarga sola de realizar peticiones a la api para obener los datos actualizados y mostrar el precio de la hora en la que estámos.

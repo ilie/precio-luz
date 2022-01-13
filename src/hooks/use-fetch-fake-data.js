@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useCurrentTime from "./use-current-time";
 
 const useFetchFakeData = () => {
   const [data, setData] = useState({});
@@ -7,6 +8,7 @@ const useFetchFakeData = () => {
   const [isLoggedIn, setIsLoggedIn] = useState();
   const [updatedAt, setUpdatedAt] = useState();
 
+  const currentTime = useCurrentTime();
   const token = localStorage.getItem("token");
   const url =
     "https://precio-luz-api-default-rtdb.europe-west1.firebasedatabase.app/indicator.json";
@@ -49,6 +51,15 @@ const useFetchFakeData = () => {
       fetchFakeData();
     }
   }, [isLoggedIn]);
+
+  // Fetch data if outdated
+  useEffect(() => {
+    const today = currentTime.getDay();
+    const lastUpdate = new Date(updatedAt).getDay();
+    if (today !== lastUpdate) {
+      fetchFakeData();
+    }
+  }, [currentTime]);
 
   return {
     data,

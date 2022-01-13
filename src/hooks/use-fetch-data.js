@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useCurrentTime from "./use-current-time";
 import axios from "axios";
 
 const useFetchData = () => {
@@ -7,6 +8,7 @@ const useFetchData = () => {
   const [isLoggedIn, setIsLoggedIn] = useState();
   const [updatedAt, setUpdatedAt] = useState();
 
+  const currentTime = useCurrentTime();
   const token = localStorage.getItem("token");
   const formatedToken = "Token token=" + token;
   const url = "https://api.esios.ree.es/indicators/10391";
@@ -50,6 +52,17 @@ const useFetchData = () => {
       fetchData();
     }
   }, [isLoggedIn]);
+
+  // Fetch data if outdated
+  useEffect(() => {
+    console.log("Fecth data invoked");
+    const today = currentTime.getDay();
+    const lastUpdate = new Date(updatedAt).getDay();
+    if (today !== lastUpdate) {
+      console.log("Fecthing new data ...");
+      fetchData();
+    }
+  }, [currentTime]);
 
   return {
     data,
