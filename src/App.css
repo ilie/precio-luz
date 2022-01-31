@@ -3,9 +3,10 @@
   flex-direction: column;
   background: #0d47a1;
   min-height: 100vh;
+  overflow-y: overlay;
 }
 h1 {
-  margin: 10px;
+  margin: 10px 5px;
   font-size: 40px;
   font-weight: 400;
 }
@@ -38,7 +39,7 @@ h2 {
 }
 .contenido {
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 5px;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
