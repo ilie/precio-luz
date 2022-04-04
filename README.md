@@ -15,7 +15,7 @@ Precio luz, es una PWA o progressive web app que se puede utilizar desde cualqui
 
 ## Technologias empleadas
 
-El proyecto está desarrolado en javascripr con React.js y utiliza algúnas dependencias:
+El proyecto está desarrolado en javascript con React.js y utiliza algúnas dependencias:
 
 - [ReactJS] - libreria JavaScript para crear interfaces de usuario
 - [Apexcharts] - libreria opensource para crear gráficos modernos e interactivos
@@ -32,7 +32,7 @@ npm install
 npm start
 ```
 
-Para procucción...
+Para ptoducción...
 
 ```sh
 npm run build
@@ -45,3 +45,6 @@ copiar el contenido de la carpeta build en cualquier tipo de servidor web, no ha
 Para poder utilizarla es necesario tener un token Sios de la red eléctrica de España, que se puede solicitar por correo electrónico de forma gratuita a esta dirección: consultasios@ree.es
 
 No es necesario refrescar ya que la app se encarga sola de realizar peticiones a la api para obener los datos actualizados y mostrar el precio de la hora en la que estámos.
+
+## Enlace a la app en producción
+Si quieres utilizarla sin más accede a https://precioluz.vercel.app e introduce tu token. Tambien la puedes instalar como una PWA.
