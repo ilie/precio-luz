@@ -10,8 +10,11 @@ const useFetchData = () => {
 
   const currentTime = useCurrentTime();
   const token = localStorage.getItem("token");
-  const formatedToken = "Token token=" + token;
-  const url = "https://api.esios.ree.es/indicators/10391";
+
+  axios.defaults.baseURL = "https://api.esios.ree.es/indicators/10391";
+  axios.defaults.headers.common["Content-Type"] = "application/json";
+  axios.defaults.headers.common["x-api-key"] = token;
+
   const tokenExists = () => {
     if (token === null) {
       return false;
@@ -25,12 +28,7 @@ const useFetchData = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const { data: response } = await axios.get(url, {
-        headers: {
-          Authorization: formatedToken,
-          "Content-Type": "application/json",
-        },
-      });
+      const { data: response } = await axios.get();
       setData(response);
       setUpdatedAt(response.indicator.values[0].datetime);
     } catch (error) {
