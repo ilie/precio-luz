@@ -13,7 +13,7 @@ import Logout from "./components/Auth/Logout";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const { data, loading, isLoggedIn, updatedAt } = useFetchData();
+  const { data, loading, isLoggedIn, updatedAt, error } = useFetchData();
 
   const lastUpdate = new Date(updatedAt);
   let content = <Spinner />;
@@ -35,7 +35,11 @@ const App = () => {
   }, [isLoggedIn]);
 
   if (indicator === undefined && !loading) {
-    content = "Error de conexión";
+    if (error) {
+      content = error.message;
+    } else {
+      content = "Error de conexión";
+    }
   }
 
   if (indicator) {
