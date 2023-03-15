@@ -5,7 +5,7 @@ import { chartLables } from "./chart-data";
 import "./Chart.css";
 
 const PriceChart = (props) => {
-  const currentHour = useCurrentTime().getHours().toString();
+  const currentHour = useCurrentTime().getHours();
   const dataValues = props.arrayValues.map((dataValue) => {
     return dataValue.toFixed(5);
   });
@@ -13,7 +13,6 @@ const PriceChart = (props) => {
     series: [
       {
         name: "€/Kwh",
-        //data: props.arrayValues,
         data: dataValues,
       },
     ],
@@ -49,19 +48,16 @@ const PriceChart = (props) => {
       legend: {
         horizontalAlign: "left",
       },
+
       annotations: {
         xaxis: [
           {
-            x: currentHour,
+            x: currentHour.toString(),
             borderColor: "#fea001",
+            borderWidth: "2.5px",
             strokeDashArray: 0,
             label: {
               show: false,
-              text: "",
-              style: {
-                color: "#fff",
-                background: "#775DD0",
-              },
             },
           },
         ],

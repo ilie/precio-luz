@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useCurrentTime = () => {
   const [currentTime, setCurretTime] = useState(new Date());
 
-  // Runs Every second
+  // Runs Every minute
   useEffect(() => {
     const everyminute = setTimeout(() => {
       setCurretTime(new Date());

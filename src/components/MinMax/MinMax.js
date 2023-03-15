@@ -4,7 +4,6 @@ import Clock from "../../assets/clock.svg";
 import classes from "./MinMax.module.css";
 const MinMax = (props) => {
   const icon = <img src={Clock} alt="Clock" />;
-  const text = "Precios minimo y máximo";
   const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
   const allValues = props.arrayValues;
